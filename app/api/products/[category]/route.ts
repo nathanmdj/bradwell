@@ -4,8 +4,8 @@ const products = [
   {
     name: 'beverages',
     imgLink: '/beverages.jpg',
-    imgLink2: '',
-    items: ['instant coffee powder', 'instant black coffee', 'non-dairy creamer', 'cold soluble creamer', 'whipped cream powder', 'sweeteners', 'anti-caking']
+    imgLink2: '/beverages2.png',
+    items: ['Instant coffee powder', 'Instant black coffee', 'Non-dairy creamer', 'Cold soluble creamer', 'Whipped cream powder', 'Sweeteners', 'Anti-caking']
   }
 ]
 
