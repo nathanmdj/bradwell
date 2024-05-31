@@ -1,3 +1,4 @@
+
 import ProductCategory from "@/components/ProductCategory"
 
 const categories = [
@@ -38,10 +39,13 @@ const page = () => {
     <section className="flex items-center flex-1 justify-center">
       <div className="products">
         <h1 className="text-center text-3xl font-bold mb-10">Our Products</h1>
-        <div className="flex justify-center gap-10 flex-wrap">
-          {categories.map((category) => (
-            <ProductCategory key={category.name} name={category.name} path={category.path} imgLink={category.imgLink}/>
-          ))}
+        <div className="flex justify-center gap-10 xl:gap-x-24 xl:mx-72 flex-wrap">
+          
+            {categories.map((category, i) => (
+              <ProductCategory key={i} name={category.name} path={category.path} imgLink={category.imgLink}/>             
+            ))}
+
+         
         </div>
       </div>
     </section>
