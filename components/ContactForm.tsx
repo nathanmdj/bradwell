@@ -99,7 +99,7 @@ const ContactForm = () => {
         />
        
         <Button type="submit"
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-lg"
+          className="w-full text-white p-3 rounded-lg"
           >Submit</Button>
       </form>
     </Form>
