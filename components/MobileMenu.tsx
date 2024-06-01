@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Button } from './ui/button'
 import {  List, X } from 'react-bootstrap-icons'
 import NavLinks from './NavLinks'
+import Link from 'next/link'
 
 interface Props {
   navLinks: {
@@ -46,7 +47,11 @@ const MobileMenu = ({navLinks}: Props) => {
               <NavLinks name={link.name} path={link.path}/>
             </div>
           ))}
-        <Button className='lg:block mt-5 bg-orange-500 hover:bg-orange-600'>Contact Us</Button>
+        <Link 
+          href={'/contact-us'} 
+          className='lg:block mt-5 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-lg'
+          onClick={handleClose}
+          >Contact Us</Link>
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import {motion} from 'framer-motion'
 import { Envelope, Geo, GeoFill, Phone,   } from 'react-bootstrap-icons';
 import {  PhoneCall } from 'lucide-react'
 import ContactForm from '@/components/ContactForm';
+import { Toaster } from '@/components/ui/toaster';
 
 const ContactPage = () => {
 
@@ -11,9 +12,9 @@ const ContactPage = () => {
     animate: {y: 0, opacity: 1}
   };
   return (
-    <section className='container my-10'>
+    <section className='container mb-10'>
       <h1 className='text-3xl font-bold text-center mb-10 lg:mb-16'>Contact Us</h1>
-      <motion.div className="grid md:grid-cols-2 gap-4 "
+      <motion.div className="grid md:grid-cols-2 gap-4 xl:gap-20 "
         variants={emailVariant}
         initial='initial'
         animate='animate'
@@ -47,6 +48,7 @@ const ContactPage = () => {
           <ContactForm/>
         </div>
       </motion.div>
+      <Toaster />
     </section>
   )
 }
