@@ -34,7 +34,7 @@ const Navbar = () => {
         ))}
       </ul>
       <Button className='hidden lg:block me-5 bg-orange-500 hover:bg-orange-600'>Contact Us</Button>
-      <MobileMenu navlinks={navlinks}/>
+      <MobileMenu navLinks={navlinks}/>
     </nav>
   )
 }

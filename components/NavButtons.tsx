@@ -62,10 +62,10 @@ const NavButtons = () => {
       </div>
       <div className="border border-emerald-700 group hover:cursor-pointer">
         <Link href={'/products'}
-          className="bg-transparent hover:bg-transparent text-black  h-[30px] pb-0 group-hover:text-orange-500 flex justify-center">
+          className="bg-transparent hover:bg-transparent text-black   pb-0 group-hover:text-orange-500 flex justify-center items-center flex-col">
           <Grid3x2Gap size={30}/>
+          <p className="text-center mb-2 text-xs font-bold group-hover:text-orange-500">ALL</p>
         </Link>
-        <p className="text-center mb-2 text-xs font-bold group-hover:text-orange-500">ALL</p>
       </div>
       <div className="border border-emerald-700 px-3">
         <Link href={prevLink} className="bg-transparent hover:bg-transparent text-black h-[60px]  hover:text-orange-500 flex justify-center items-center">

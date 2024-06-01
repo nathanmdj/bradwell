@@ -1,17 +1,16 @@
 'use client'
 import { useState } from 'react'
 import { Button } from './ui/button'
-import { Justify, X } from 'react-bootstrap-icons'
-import Link from 'next/link'
+import {  List, X } from 'react-bootstrap-icons'
 import NavLinks from './NavLinks'
 
 interface Props {
-  navLinks: [{
+  navLinks: {
     name: string;
     path: string;
-  }]
+  }[];
 }
-const MobileMenu = ({navlinks}) => {
+const MobileMenu = ({navLinks}: Props) => {
   const [show, setShow] = useState(false)
   
   const handleShow = () => {
@@ -24,13 +23,15 @@ const MobileMenu = ({navlinks}) => {
   return (
     <div className="mobile-menu me-5 lg:hidden">
       <Button 
+        variant={'outline'}
         type='button'
         onClick={handleShow}
+        className='bg-orange-500'
       >
-        <Justify size={30}/>
+        <List size={30} color='white'/>
       </Button>
-      <div className={`${show ? 'block' : 'hidden'} absolute top-0 left-0 right-0  z-10 bg-white pb-20`}>
-        <div className="flex justify-end p-2">
+      <div className={`${show ? 'block' : 'hidden'} absolute top-0 left-0 right-0 bottom-0 z-10 bg-white pb-20 ease-in-out duration-5000`}>
+        <div className="flex justify-end p-5">
           <Button 
             type='button'
             className='!bg-transparent px-0'
@@ -40,7 +41,7 @@ const MobileMenu = ({navlinks}) => {
           </Button>
         </div>
         <div className="flex flex-col items-center justify-center gap-5">
-          {navlinks?.map((link, i)=> (
+          {navLinks?.map((link, i)=> (
             <div key={i} onClick={handleClose} className='text-xl font-bold'>
               <NavLinks name={link.name} path={link.path}/>
             </div>
