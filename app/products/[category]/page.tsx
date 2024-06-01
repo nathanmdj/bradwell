@@ -3,7 +3,7 @@ import Image from "next/image";
 
 
 const ProductPage = async({params}: {params: {category: string}}) => {
-  const response = await fetch(`/api/products/${params.category}`)
+  const response = await fetch(`https://bradwell.vercel.app/api/products/${params.category}`)
 
   const data = await response.json()
   
