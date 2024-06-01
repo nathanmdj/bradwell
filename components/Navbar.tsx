@@ -33,7 +33,10 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <Button className='hidden lg:block me-5 bg-orange-500 hover:bg-orange-600'>Contact Us</Button>
+      <Link 
+        href={'/contact-us'} 
+        className='hidden lg:block me-5 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-lg'
+      >Contact Us</Link>
       <MobileMenu navLinks={navlinks}/>
     </nav>
   )
