@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
 import NavLinks from './NavLinks'
 import { Button } from './ui/button'
+import Link from 'next/link'
+import MobileMenu from './MobileMenu'
 
 const navlinks = [
   {
@@ -14,22 +15,26 @@ const navlinks = [
   },
   {
     name: "About Us",
-    path: "/about",
+    path: "/about-us",
   },
-  
 ]
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center ">
       <div className="logo p-2 ms-5">
-        <Image src="/logo.png" width={80} height={60} alt='logo'/>
+        <Link href={'/'}>
+          <Image src="/logo.png" width={80} height={60} alt='logo'/>
+        </Link>
       </div>
-      <ul className='flex gap-5 '>
+      <ul className='lg:flex gap-5 hidden'>
         {navlinks.map((link) => (
-          <NavLinks key={link.name} name={link.name} path={link.path}/>
+          <li key={link.name} className='text-xl font-bold'>
+            <NavLinks  name={link.name} path={link.path}/>
+          </li>
         ))}
       </ul>
-      <Button className='me-5 bg-orange-500 hover:bg-orange-600'>Contact Us</Button>
+      <Button className='hidden lg:block me-5 bg-orange-500 hover:bg-orange-600'>Contact Us</Button>
+      <MobileMenu navlinks={navlinks}/>
     </nav>
   )
 }
