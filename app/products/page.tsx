@@ -1,4 +1,5 @@
 
+import OtherProducts from "@/components/OtherProducts"
 import ProductCategory from "@/components/ProductCategory"
 
 const categories = [
@@ -34,18 +35,43 @@ const categories = [
   },
   
 ]
+
+const otherProducts = [
+  {
+    name: 'Household and Cleaning',
+    imgLink: '/cleaning.jpg',
+  },
+  {
+    name: 'Personal Care and Cosmetics',
+    imgLink: '/cosmetics.webp',
+  },
+  {
+    name: 'Aromatic and Oils',
+    imgLink: '/aromatic.webp',
+  },
+  {
+    name: 'Industrial Chemicals and Raw Materials',
+    imgLink: '/industrial.webp',
+  },
+  
+]
 const page = () => {
   return (
-    <section className="flex items-center flex-1 justify-center">
+    <section className="flex flex-col items-center justify-center">
       <div className="products">
-        <h1 className="text-center text-3xl font-bold mb-10">Our Products</h1>
+        <h1 className="text-center text-3xl font-bold mb-8">Our Products</h1>
         <div className="flex justify-center gap-10 xl:gap-x-24 xl:mx-72 flex-wrap">
-          
-            {categories.map((category, i) => (
-              <ProductCategory key={i} name={category.name} path={category.path} imgLink={category.imgLink}/>             
-            ))}
-
-         
+          {categories.map((category, i) => (
+            <ProductCategory key={i} name={category.name} path={category.path} imgLink={category.imgLink}/>             
+          ))}
+        </div>
+      </div>
+      <div className="my-10">
+        <h1 className="text-center text-3xl font-bold mb-8">Other Products</h1>
+        <div className="flex justify-center gap-10 xl:gap-x-24 xl:mx-72 flex-wrap">
+          {otherProducts.map((category, i) => (
+            <OtherProducts key={i} name={category.name} imgLink={category.imgLink}/>             
+          ))}
         </div>
       </div>
     </section>

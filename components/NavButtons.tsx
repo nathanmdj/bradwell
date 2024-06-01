@@ -19,6 +19,18 @@ const navLinks = [
     id: 3,
     path: "/products/sauces",
   },
+  {
+    id: 4,
+    path: "/products/desserts",
+  },
+  {
+    id: 5,
+    path: "/products/flavours",
+  },
+  {
+    id: 6,
+    path: "/products/nutraceuticals",
+  },
 ]
 const NavButtons = () => {
   const pathname = usePathname();
