@@ -1,6 +1,7 @@
 
 import OtherProducts from "@/components/OtherProducts"
 import ProductCategory from "@/components/ProductCategory"
+import { Suspense } from "react"
 
 const categories = [
   {
@@ -63,7 +64,7 @@ const page = () => {
         <div className="flex justify-center gap-10 xl:gap-x-24 xl:mx-72 flex-wrap">
           {categories.map((category, i) => (
             <ProductCategory key={i} name={category.name} path={category.path} imgLink={category.imgLink}/>             
-          ))}
+          ))}         
         </div>
       </div>
       <div className="my-10">
